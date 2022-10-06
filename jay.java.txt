@@ -1,0 +1,28 @@
+import java.io.*
+class cipher
+{
+public static void main(String[]args)
+{
+String s="";
+int i;
+try
+{
+File ip=new File("C:\Users\Admin\Desktop\Jayesh/1.txt");
+File op=new File("C:\Users\Admin\Desktop\Jayesh/2.txt");
+File op1=new File("C:\Users\Admin\Desktop\Jayesh/3.txt");
+FileInputStream fis=new FileInputStream(ip);
+FileOutputStream fos=new FileOutputStream(op);
+FileOutputStream fos1=new FileOutputStream(op1);
+while((i=fis.read())!=-1)
+{
+fos.write(i);
+fos1.write(i+10);
+}
+System.out.println("File Copied..")
+}
+catch(Exception e)
+{
+System.output.println("BIGGG ERROR...");
+}
+}
+}
